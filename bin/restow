@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+bindir="$(dirname "$SCRIPT")"
+basedir="$(dirname "$bindir")"
+
+# Symlink dotfiles
+pushd $basedir &> /dev/null
+find * -maxdepth 0 -type d -print0 | xargs -0 -n 1 stow
+popd &> /dev/null
