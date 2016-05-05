@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 #
 # dot
 #
@@ -22,7 +22,7 @@ while [ -h "$SCRIPT" ] ; do
     if expr "$link" : '/.*' > /dev/null; then
         SCRIPT="$link"
     else
-        SCRIPT="$(dirname "$SCRIPT"$)/$link"
+        SCRIPT="$(dirname "$SCRIPT")/$link"
     fi
 done
 bindir="$(dirname "$SCRIPT")"
