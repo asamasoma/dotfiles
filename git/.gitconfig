@@ -8,7 +8,7 @@
 	email = amasa.amos@intentmedia.com
 [core]
 	editor = emacs
-	excludesfile = ~/.gitexcludes
+	excludesfile = ~/.gitignore_global
 [alias]
 	co = checkout
 	ci = commit
@@ -24,3 +24,6 @@
 	renamelimit = 3000
 [rebase]
 	autosquash = true
+
+[include]
+    path = ~/.gitconfig.local

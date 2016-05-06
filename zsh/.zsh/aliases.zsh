@@ -1,5 +1,6 @@
 ## Useful aliases
-alias cuke='bundle exec cucumber'
 alias lvared="IFS=\$'\n' vared"
 alias jps="$JAVA_HOME/bin/jps"
-alias sc='bundle exec rails console'
+
+# Pipe my public key to my clipboard.
+alias pubkey="more ~/.ssh/id_rsa.pub | pbcopy | echo '=> Public key copied to pasteboard.'"

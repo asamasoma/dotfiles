@@ -1,5 +1,5 @@
 ### Aliases
-alias gs='git status'
+alias gs='git status -sb'
 alias gx='gitx --all'
 alias ghist='git log --pretty=format:"%h %ad | %s%d [%an]" --graph --date=short'
 alias git-cleanup="git branch --merged | grep -v '^* master$' | grep -v '^  master$' | xargs git branch -d && git remote prune origin"
@@ -21,11 +21,14 @@ function cpmsg() {
 
 ### Completions
 
-# This assumes Git was installed by Homebrew to /usr/local:
-# source /usr/local/etc/bash_completion.d/*
-# The above has been deprecated by brew. Use the following line instead:
-if [ -f `brew --prefix`/etc/bash_completion ]; then
-    . `brew --prefix`/etc/bash_completion
+# Uses git's autocompletion for inner commands. Assumes an install of git's
+# bash `git-completion` script at $completion below (this is where Homebrew
+# tosses it, at least).
+completion='$(brew --prefix)/share/zsh/site-functions/_git'
+
+if test -f $completion
+then
+  source $completion
 fi
 
 # Speed git tab completion

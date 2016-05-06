@@ -4,22 +4,4 @@ RCS
 .+,v
 
 CVS
-\.\#.+       # CVS conflict files / emacs lock files
-\.cvsignore
-
-\.svn
-_darcs
-\.hg
-
-\.git
-\.gitignore
-
-.+~          # emacs backup files
-\#.*\#       # emacs autosave files
-
-^/dot        # dotfile executable
-^/restow     # restow executable
-
-^/README.*
-^/LICENSE.*
-^/COPYING
+.*			 # ignore all files in this directory
