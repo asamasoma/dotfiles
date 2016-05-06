@@ -9,20 +9,22 @@ bindir="$(dirname "$0")"
 basedir="$(dirname "$bindir")"
 
 # Set OS X defaults
+"Setting OS X defaults..."
 $basedir/osx/.osx
 
 # Install homebrew
 $basedir/homebrew/install.sh 2>&1
 
 # Upgrade homebrew
-echo "› brew update"
+echo "Updating homebrew..."
 brew update
 
 # Install software
-echo "› $basedir/script/install"
+echo "Running install scripts..."
 $basedir/script/install
 
 # Symlink dotfiles
+echo "Symlinking dotfiles..."
 pushd $basedir &> /dev/null
-find * -maxdepth 0 -type d -print0 | xargs -0 -n 1 stow
+find * -maxdepth 0 -type d -print0 | xargs -0 -n 1 -I '{}' stow '{}' --restow
 popd &> /dev/null
