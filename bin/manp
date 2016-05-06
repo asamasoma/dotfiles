@@ -29,4 +29,4 @@ file="$cache_dir/${2:+$2.}$1.pdf"
 [[ -e "$file" ]] || man -t "$@" | pstopdf -i -o "$file" >/dev/null 2>&1
 
 # Open PDF (if it does exist).
-[[ -e "$file" ]] && open "$file"
+[[ -e "$file" ]] && open -a Preview "$file"
