@@ -5,7 +5,7 @@
 # `dot` handles installation, updates, things like that. Run it periodically
 # to make sure you're on the latest and greatest.
 
-bindir="$(dirname "$SCRIPT")"
+bindir="$(dirname "$0")"
 basedir="$(dirname "$bindir")"
 
 # Set OS X defaults

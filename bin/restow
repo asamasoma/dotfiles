@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-bindir="$(dirname "$SCRIPT")"
+bindir="$(dirname "$0")"
 basedir="$(dirname "$bindir")"
 
 # Symlink dotfiles
