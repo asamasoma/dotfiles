@@ -1,0 +1,26 @@
+[hub]
+	protocol = https
+
+[push]
+	default = nothing
+[user]
+	name = asamasoma
+	email = amasa.amos@intentmedia.com
+[core]
+	editor = emacs
+	excludesfile = ~/.gitexcludes
+[alias]
+	co = checkout
+	ci = commit
+	st = status
+	br = branch
+	hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
+	type = cat-file -t
+	dump = cat-file -p
+	dom = diff origin/master
+	ignored = !git ls-files -v | grep "^[[:lower:]]"
+[merge]
+	tool = kdiff3
+	renamelimit = 3000
+[rebase]
+	autosquash = true
