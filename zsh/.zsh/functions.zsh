@@ -136,3 +136,12 @@ function retry() {
   sleep 1
   retry $@
 }
+
+# read markdown files like manpages
+markdown() {
+    pandoc -s -f markdown -t man "$*" | man -l -
+}
+# nullpointer url shortener
+short() {
+  curl -F"shorten=$*" https://0x0.st
+}

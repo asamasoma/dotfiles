@@ -5,6 +5,9 @@ if [[ "$OSTYPE" == darwin* ]]; then
   alias c='pbcopy'
   alias p='pbpaste'
 
+  # md5sum doesn't exist on osx
+  alias md5sum='md5'
+
   # Remove all items safely, to Trash (`brew install trash`).
   alias rm='trash'
 

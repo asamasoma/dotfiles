@@ -13,7 +13,7 @@ if [[ "$PATH" != *"$HOME/dcos/bin"* ]]; then
     export PATH=$PATH:/Users/amasa.amos/dcos/bin;
 fi
 # Add dotfile scripts to PATH
-export PATH=$PATH:$DOTFILES/bin
+export PATH=$PATH:$DOTFILES/bin:$DOTFILES/fun/bin
 
 # Keep a longer command history and ignore duplicate entries
 export HISTFILESIZE=5000
