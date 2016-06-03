@@ -1,6 +1,9 @@
 ## aliases
 
-alias reload="exec $SHELL -l"
+alias reload='. ~/.zshrc'
+alias reload!="exec $SHELL -l"
+
+alias cls='clear'
 
 alias "cd.."="cd ../"
 alias up="cd ../"
