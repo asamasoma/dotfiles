@@ -14,13 +14,3 @@ if [[ "$PATH" != *"$HOME/dcos/bin"* ]]; then
 fi
 # Add dotfile scripts to PATH
 export PATH=$PATH:$DOTFILES/bin:$DOTFILES/fun/bin
-
-# Keep a longer command history and ignore duplicate entries
-export HISTFILESIZE=5000
-export HISTCONTROL=ignoredups:erasedups
-
-# Keep the directory stack manageable.
-export DIRSTACKSIZE=20
-
-# Set default editor
-export EDITOR="emacs"

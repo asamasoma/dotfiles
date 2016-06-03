@@ -1,4 +1,15 @@
 # Customize to your needs...
+
+# Keep a longer command history and ignore duplicate entries
+export HISTFILESIZE=5000
+export HISTCONTROL=ignoredups:erasedups
+
+# Keep the directory stack manageable.
+export DIRSTACKSIZE=20
+
+# Set default editor
+export EDITOR="emacs"
+
 autoload -U run-help
 HELPDIR=/usr/local/share/zsh/helpfiles
 autoload -U edit-command-line
@@ -17,13 +28,8 @@ setopt numeric_glob_sort
 unsetopt multios
 
 bindkey -e
-zmodload zsh/complist
-zstyle ':completion:*:default' list-prompt '%S%M matches%s'
 bindkey -M listscroll q send-break
 bindkey '\C-i' complete-word
-zstyle ':completion:::::' completer _expand _complete _ignored
-zstyle ':completion:*:expand:*' tag-order all-expansions
-zstyle ':completion:*:expand:*' tag-order 'expansions original'
 zle -N edit-command-line
 bindkey '\C-w' kill-region
 bindkey '\ee' edit-command-line
