@@ -38,6 +38,7 @@ brew 'stow'
 brew 'the_silver_searcher'
 brew 'toilet'
 brew 'trash'
+brew 'tree'
 brew 'unrar'
 brew 'wget'
 

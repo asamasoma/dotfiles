@@ -9,7 +9,7 @@ if [[ "$OSTYPE" == darwin* ]]; then
   alias md5sum='md5'
 
   # Remove all items safely, to Trash (`brew install trash`).
-  alias rm='trash'
+  # alias rm='trash'
 
   # Case-insensitive pgrep that outputs full path.
   alias pgrep='pgrep -fli'
@@ -29,12 +29,17 @@ fi
 if [[ "$OSTYPE" == darwin* ]]; then
 
 # Show current Finder directory.
-function finder {
+function finder() {
   osascript 2>/dev/null <<EOF
     tell application "Finder"
       return POSIX path of (target of window 1 as alias)
     end tell
 EOF
+}
+
+# Change working directory to the top-most Finder window location
+function cdf() { # short for `cdfinder`
+  cd "$(osascript -e 'tell app "Finder" to POSIX path of (insertion location as alias)')";
 }
 
 fi
