@@ -1,6 +1,5 @@
 # Executable directories
 export USR_LOCAL=/usr/local/bin:/usr/local/sbin
-export JAVA_HOME=/Library/Java/Home
 export MYSQL_PATH=/usr/local/mysql/bin
 export DOTFILES=$HOME/.dotfiles
 
