@@ -9,7 +9,7 @@ bindir="$(dirname "$0")"
 basedir="$(dirname "$bindir")"
 
 # Set OS X defaults
-"Setting OS X defaults..."
+echo "Setting OS X defaults..."
 $basedir/osx/.osx
 
 # Install homebrew
