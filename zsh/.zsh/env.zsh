@@ -7,9 +7,5 @@ export DOTFILES=$HOME/.dotfiles
 export PATH=$JAVA_HOME/bin:$MYSQL_PATH:$USR_LOCAL:$PATH
 # Add go binaries to PATH
 export PATH=$PATH:/usr/local/opt/go/libexec/bin
-# Add DCOS CLI binary to PATH
-if [[ "$PATH" != *"$HOME/dcos/bin"* ]]; then
-    export PATH=$PATH:/Users/amasa.amos/dcos/bin;
-fi
 # Add dotfile scripts to PATH
 export PATH=$PATH:$DOTFILES/bin:$DOTFILES/fun/bin
