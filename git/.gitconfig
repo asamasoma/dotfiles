@@ -7,7 +7,7 @@
 	name = asamasoma
 	email = amasa.amos@intentmedia.com
 [core]
-	editor = emacs
+	editor = vim
 	excludesfile = ~/.gitignore_global
 [alias]
 	co = checkout
