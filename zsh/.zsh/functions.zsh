@@ -27,7 +27,7 @@ function mkd() {
 # $ size dir1 file2.js
 function size() {
   # du -sh "$@" 2>&1 | grep -v '^du:' | sort -nr
-  du -shck "$@" | sort -rn | awk '
+  sudo du -shck "$@" | sort -rn | awk '
       function human(x) {
           s="kMGTEPYZ";
           while (x>=1000 && length(s)>1)
@@ -49,6 +49,11 @@ function fs() {
   else
     du $arg .[^.]* ./*;
   fi;
+}
+
+# List largest files under a directory
+function largest() {
+  du -a * | sort -r -n | head -10
 }
 
 # $ git log --no-merges --pretty=format:"%ae" | stats
