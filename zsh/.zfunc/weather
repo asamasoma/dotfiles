@@ -1,0 +1,5 @@
+# weather
+function weather() {
+	zip=${1:-11201}
+	curl "http://wttr.in/${zip}"
+}
