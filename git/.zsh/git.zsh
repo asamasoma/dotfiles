@@ -4,6 +4,7 @@ alias gx='gitx --all'
 alias ghist='git log --pretty=format:"%h %ad | %s%d [%an]" --graph --date=short'
 alias git-cleanup="git branch --merged | grep -v '^* master$' | grep -v '^  master$' | xargs git branch -d && git remote prune origin"
 alias grpush='git push origin $(git_current_branch):remote-run/$(git_current_branch)'
+alias gfrpush='git push -f origin $(git_current_branch):remote-run/$(git_current_branch)'
 
 ### Functions
 
