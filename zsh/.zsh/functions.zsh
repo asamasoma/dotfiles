@@ -339,3 +339,8 @@ function o() {
 function tre() {
   tree -aC -I '.git|node_modules|bower_components' --dirsfirst "$@" | less -FRNX;
 }
+
+# better whois
+function whois() {
+  /usr/bin/whois -h geektools.com ${@##http?(s)://};
+}
