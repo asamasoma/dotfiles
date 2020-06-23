@@ -1,5 +1,11 @@
 # dotfiles
 
+## Usage
+Clone to `~/.dotfiles`
+Execute `bin/dot` for initial setup
+
+## TODO
+
 TODO: customize the_silver_searcher
 TODO: add these to /etc/hosts http://someonewhocares.org/hosts/mac/
 TODO: better zcompdump code in .zlogin
