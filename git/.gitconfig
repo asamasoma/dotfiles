@@ -29,7 +29,7 @@
   	rmtag = "!sh -c 'git tag -d $1; git push origin :refs/tags/$1'"
 
 [merge]
-	tool = kdiff3
+	tool = vimdiff
 	renamelimit = 3000
 [rebase]
 	autosquash = true
