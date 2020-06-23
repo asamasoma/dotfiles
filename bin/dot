@@ -9,18 +9,18 @@ bindir="$(dirname "$0")"
 basedir="$(dirname "$bindir")"
 
 # Set OS X defaults
-echo "Setting OS X defaults..."
-$basedir/osx/.osx
+#echo "Setting OS X defaults..."
+#$basedir/osx/.osx
 
 # Install homebrew
 $basedir/homebrew/install.sh 2>&1
 
 # Upgrade homebrew
-echo "Updating homebrew..."
+#echo "Updating homebrew..."
 brew update
 
 # Install software
-echo "Running install scripts..."
+#echo "Running install scripts..."
 $basedir/script/install
 
 # Symlink dotfiles
