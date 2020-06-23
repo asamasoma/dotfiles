@@ -13,3 +13,6 @@ TODO: move env.sh to .zshenv
 TODO: set up sublime theme customizations https://github.com/paulmillr/dotfiles/tree/master/sublime
 TODO: organize .zsh settings like https://github.com/xero/dotfiles/tree/master/zsh/.zsh?
 TODO: set up fonts for `toilet`
+TODO: install 'oh-my-zsh' during setup
+TODO: install 'zsh-syntax-highlighting' plugin for 'oh-my-zsh' during setup
+TODO: port iterm2 settings
