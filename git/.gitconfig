@@ -1,11 +1,12 @@
 [hub]
-	protocol = https
-
+	protocol = ssh
 [push]
 	default = nothing
+[pull]
+	ff = only		
 [user]
 	name = Amasa Amos
-	email = amasa.amos@intentmedia.com
+	email = asamasoma@intentmedia.com
 [core]
 	editor = vim
 	excludesfile = ~/.gitignore_global
