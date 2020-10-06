@@ -1,14 +1,14 @@
 # Customize to your needs...
 
 # Keep a longer command history and ignore duplicate entries
-export HISTFILESIZE=5000
-export HISTCONTROL=ignoredups:erasedups
+HISTFILESIZE=5000
+HISTCONTROL=ignoredups:erasedups
 
 # Keep the directory stack manageable.
-export DIRSTACKSIZE=20
+DIRSTACKSIZE=20
 
 # Set default editor
-export EDITOR="emacs"
+EDITOR="vim"
 
 autoload -U run-help
 HELPDIR=/usr/local/share/zsh/helpfiles
