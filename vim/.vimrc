@@ -1,14 +1,16 @@
+" Custom configuration.
+inoremap jk <ESC>
 
-" An example for a vimrc file.
-"
-" Maintainer:	Bram Moolenaar <Bram@vim.org>
-" Last change:	2019 Jan 26
-"
-" To use it, copy it to
-"     for Unix and OS/2:  ~/.vimrc
-"	      for Amiga:  s:.vimrc
-"  for MS-DOS and Win32:  $VIM\_vimrc
-"	    for OpenVMS:  sys$login:.vimrc
+let mapleader = " "
+
+filetype plugin indent on
+syntax on
+set number
+set noswapfile
+set ignorecase
+set incsearch
+set encoding=utf-8
+set clipboard=unnamedplus
 
 " When started as "evim", evim.vim will already have done these settings, bail
 " out.
@@ -44,12 +46,3 @@ if has('syntax') && has('eval')
   packadd! matchit
 endif
 
-" Custom configuration.
-inoremap jk <ESC>
-
-let mapleader = " "
-
-filetype plugin indent on
-syntax on
-set encoding=utf-8
-set clipboard=unnamedplus
