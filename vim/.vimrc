@@ -10,7 +10,11 @@ set noswapfile
 set ignorecase
 set incsearch
 set encoding=utf-8
-set clipboard=unnamedplus
+if system('uname -s') == "Darwin\n"
+  set clipboard=unnamed "OSX
+else
+  set clipboard=unnamedplus "Linux
+endif
 
 " When started as "evim", evim.vim will already have done these settings, bail
 " out.
