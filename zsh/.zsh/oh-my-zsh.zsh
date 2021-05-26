@@ -91,3 +91,4 @@ ZSH_HIGHLIGHT_PATTERNS=('rm -rf *' 'fg=white,bold,bg=red') # To have commands st
 # vi-mode plugin configuration
 VI_MODE_RESET_PROMPT_ON_MODE_CHANGE=true
 VI_MODE_SET_CURSOR=true
+bindkey -M viins 'jk' vi-cmd-mode
