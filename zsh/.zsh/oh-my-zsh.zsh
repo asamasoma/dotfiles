@@ -40,7 +40,23 @@ ZSH_THEME="robbyrussell"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git docker docker-compose ruby gem rvm bundler catimg history osx sbt sublime wd zsh-syntax-highlighting)
+plugins=(
+   git
+   docker
+   docker-compose
+   ruby
+   gem
+   rvm
+   bundler
+   catimg
+   history
+   osx
+   sbt
+   sublime
+   vi-mode
+   wd
+   zsh-syntax-highlighting
+)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -71,3 +87,7 @@ source $ZSH/oh-my-zsh.sh
 
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern cursor)
 ZSH_HIGHLIGHT_PATTERNS=('rm -rf *' 'fg=white,bold,bg=red') # To have commands starting with `rm -rf` in red:
+
+# vi-mode plugin configuration
+VI_MODE_RESET_PROMPT_ON_MODE_CHANGE=true
+VI_MODE_SET_CURSOR=true

@@ -40,6 +40,16 @@ augroup vimrcEx
   autocmd FileType text setlocal textwidth=78
 augroup END
 
+" Easier split navigations
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
+" More natural-feeling splits
+set splitbelow
+set splitright
+
 " Add optional packages.
 "
 " The matchit plugin makes the % command work better, but it is not backwards
