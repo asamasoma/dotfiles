@@ -50,6 +50,18 @@ nnoremap <C-H> <C-W><C-H>
 set splitbelow
 set splitright
 
+" vv to generate new vertical split
+nnoremap <silent> vv <C-w>v
+
+" Prompt for a command to run
+map <Leader>vp :VimuxPromptCommand<CR>
+
+" Run last command executed by VimuxRunCommand
+map <Leader>vl :VimuxRunLastCommand<CR>
+
+" Zoom the tmux runner pane
+map <leader>vz :VimuxZoomRunner<CR>
+
 " Add optional packages.
 "
 " The matchit plugin makes the % command work better, but it is not backwards
