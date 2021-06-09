@@ -62,6 +62,9 @@ map <Leader>vl :VimuxRunLastCommand<CR>
 " Zoom the tmux runner pane
 map <leader>vz :VimuxZoomRunner<CR>
 
+" Use fzf
+set rtp+=/usr/local/opt/fzf
+
 " Add optional packages.
 "
 " The matchit plugin makes the % command work better, but it is not backwards
