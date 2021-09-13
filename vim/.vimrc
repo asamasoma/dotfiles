@@ -54,16 +54,46 @@ set splitright
 nnoremap <silent> vv <C-w>v
 
 " Prompt for a command to run
-map <Leader>vp :VimuxPromptCommand<CR>
+map <leader>vp :VimuxPromptCommand<CR>
 
 " Run last command executed by VimuxRunCommand
-map <Leader>vl :VimuxRunLastCommand<CR>
+map <leader>vl :VimuxRunLastCommand<CR>
 
 " Zoom the tmux runner pane
 map <leader>vz :VimuxZoomRunner<CR>
 
 " Use fzf
 set rtp+=/usr/local/opt/fzf
+
+if (has('termguicolors'))
+  set termguicolors
+endif
+
+" Activate material colorscheme
+let g:material_terminal_italics = 1
+let g:material_theme_style = 'default' 
+let g:airline_theme = 'material'
+colorscheme material
+
+" Fix italics in Vim
+if !has('nvim')
+  let &t_ZH="\e[3m"
+  let &t_ZR="\e[23m"
+endif
+
+set updatetime=100
+
+let NERDTreeShowHidden=1
+
+" Start NERDTree when Vim is started without file arguments.
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists('s:std_in') | NERDTree | endif
+
+" Exit Vim if NERDTree is the only window left.
+autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() |
+    \ quit | endif
+
+map <C-n> :NERDTreeToggle<CR>
 
 " Add optional packages.
 "
@@ -75,3 +105,11 @@ if has('syntax') && has('eval')
   packadd! matchit
 endif
 
+" Put these lines at the very end of your vimrc file.
+
+" Load all plugins now.
+" Plugins need to be added to runtimepath before helptags can be generated.
+packloadall
+" Load all of the helptags now, after plugins have been loaded.
+" All messages and errors will be ignored.
+silent! helptags ALL
