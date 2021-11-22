@@ -42,3 +42,9 @@ alias pubkey="more ~/.ssh/id_rsa.pub | pbcopy | echo '=> Public key copied to pa
 
 # Lists the ten most used commands.
 alias history-stat="history | awk '{print \$2}' | sort | uniq -c | sort -n -r | head"
+
+# fd all
+alias fda='fd -IH'
+
+# ripgrep all
+alias rga='rg -uuu'
