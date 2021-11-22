@@ -50,7 +50,7 @@ plugins=(
    bundler
    catimg
    history
-   osx
+   macos
    sbt
    sublime
    vi-mode
