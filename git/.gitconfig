@@ -34,8 +34,7 @@
 	renamelimit = 3000
 [rebase]
 	autosquash = true
-
 [include]
-    path = ~/.gitconfig.local
+    	path = ~/.gitconfig.local
 [init]
 	defaultBranch = main
