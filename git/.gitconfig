@@ -6,7 +6,7 @@
 	ff = only		
 [user]
 	name = Amasa Amos
-	email = asamasoma@intentmedia.com
+	email = asamasoma@gmail.com 
 [core]
 	editor = vim
 	excludesfile = ~/.gitignore_global
