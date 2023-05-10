@@ -23,6 +23,9 @@ fi
 
 exit 0
 
+(echo; echo 'eval "$(/opt/homebrew/bin/brew shellenv)"') >> /Users/amasa.amos/.zprofile
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
 # Run Homebrew through the Brewfile
 echo "> brew bundle"
 brew bundle
