@@ -45,6 +45,7 @@ brew 'trash'
 brew 'tree'
 brew 'wget'
 
+cask 'discord'
 cask 'docker'
 cask 'dropbox'
 cask 'firefox'
