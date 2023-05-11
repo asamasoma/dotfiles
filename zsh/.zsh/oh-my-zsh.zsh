@@ -55,7 +55,6 @@ plugins=(
    sublime
    vi-mode
    wd
-   zsh-syntax-highlighting
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -92,3 +91,5 @@ ZSH_HIGHLIGHT_PATTERNS=('rm -rf *' 'fg=white,bold,bg=red') # To have commands st
 VI_MODE_RESET_PROMPT_ON_MODE_CHANGE=true
 VI_MODE_SET_CURSOR=true
 bindkey -M viins 'jk' vi-cmd-mode
+
+source $HOMEBREW_PREFIX/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
