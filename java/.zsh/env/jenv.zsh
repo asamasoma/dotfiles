@@ -1,2 +1,2 @@
-### Use homebrew's directories rather than ~/.jenv
-export JENV_ROOT=/usr/local/var/jenv
+### Include .jenv/bin in PATH
+export PATH="$HOME/.jenv/bin:$PATH"
