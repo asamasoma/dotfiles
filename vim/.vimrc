@@ -25,6 +25,11 @@ else
   set clipboard=unnamedplus "Linux
 endif
 
+" Easier code folding
+set foldmethod=syntax
+nnoremap <silent> <Space> @=(foldlevel('.')?'za':"\<Space>")<CR>
+vnoremap <Space> zf
+
 " When started as "evim", evim.vim will already have done these settings, bail
 " out.
 if v:progname =~? "evim"
