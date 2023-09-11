@@ -1,4 +1,13 @@
 " Custom configuration.
+set modelines=0 "CVE-2007-2438
+
+set nocompatible
+
+" Don't write backup file if vim is being called by "crontab -e"
+au BufWrite /private/tmp/crontab.* set nowritebackup nobackup
+" Don't write backup file if vim is being called by "chpass"
+au BufWrite /private/etc/pw.* set nowritebackup nobackup
+
 inoremap jk <ESC>
 
 let mapleader = " "
