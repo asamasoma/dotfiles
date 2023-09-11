@@ -344,3 +344,12 @@ function tre() {
 function whois() {
   /usr/bin/whois -h geektools.com ${@##http?(s)://};
 }
+
+# default to linux/amd64 platform when running or building on M1 macs
+function docker() {
+  if [[ `uname -m` == "arm64" ]] && [[ "$1" == "run" || "$1" == "build" ]]; then
+     /usr/local/bin/docker "$1" --platform linux/amd64 "${@:2}"
+  else
+     /usr/local/bin/docker "$@"
+  fi
+}
