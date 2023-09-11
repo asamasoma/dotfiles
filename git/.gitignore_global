@@ -64,3 +64,7 @@ Desktop.ini
 
 # IntelliJ Idea
 .idea/
+
+# ctags output
+.tags
+tags
