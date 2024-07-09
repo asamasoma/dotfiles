@@ -27,6 +27,7 @@ endif
 
 " Easier code folding
 set foldmethod=syntax
+set foldlevelstart=99
 nnoremap <silent> <Space> @=(foldlevel('.')?'za':"\<Space>")<CR>
 vnoremap <Space> zf
 
